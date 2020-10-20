@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body{
+            background: #000000;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Comic Sans MS";
+            color: #fff;
+        }
+        .main-swiper {
+            width: 100%;
+            height: 90vh;
+            margin-bottom: 10vh;
+        }
+        .mini-swiper {
+            width: 100%;
+            height: 20vh;
+            margin-bottom: 10vh;
+        }
+        .slideWrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiperControls{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            bottom: 0;
+        }
+        .swiperPagination{
+            position: relative;
+            display: flex;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+            bottom: auto;
+            left: auto;
+            right: auto;
+            top: auto;
+            margin-right: 20px;
+        }
+        .swiperProgress{
+            position: relative;
+            width: 400px;
+            height: 5px;
+            background: #606060;
+            margin-right: 50px;
+        }
+        .swiperProgressCur{
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background: #e2dede;
+            margin: 0;
+            border: 0 none;
+            transition: .3s;
+        }
+        .swiperButtons{
+            position: relative;
+            display: flex;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiperButtons .swiper-button{
+            position: relative;
+            bottom: auto;
+            left: auto;
+            right: auto;
+            top: auto;
+            color: white;
+        }
+        .mini-swiper .swiper-button{
+            width: 36px;
+            height: 36px;
+            background: #fff;
+            color: black;
+        }
+        .mini-swiper .swiper-button:after{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="main-swiper swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст1</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст2</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст3</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст4</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст5</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiperControls">
+        <div class="swiperPagination"></div>
+
+        <div class="swiperProgress">
+            <hr class="swiperProgressCur"/>
+        </div>
+
+        <div class="swiperButtons">
+            <div class="swiper-button-prev swiper-button"></div>
+            <div class="swiper-button-next swiper-button"></div>
+        </div>
+    </div>
+</div>
+<div class="mini-swiper swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст1</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст2</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст3</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст4</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст5</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст5</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст1</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст2</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст3</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст4</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст5</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="slideWrapper">
+                <span>текст5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-button-prev swiper-button"></div>
+    <div class="swiper-button-next swiper-button"></div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+const mainSwiper = new Swiper('.main-swiper', {
+    loop: true,
+
+    pagination: {
+      el: '.swiperPagination',
+      type: 'fraction',
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+})
+
+let curSlide = mainSwiper.pagination.el.querySelector('.swiper-pagination-current')
+let allSlide = mainSwiper.pagination.el.querySelector('.swiper-pagination-total')
+let slider = mainSwiper.wrapperEl.parentElement
+let progressCur = slider.querySelector('.swiperProgressCur')
+
+mainSwiper.on('update slideChange', () => {
+    addZeros(Number(curSlide.innerText), Number(allSlide.innerText))
+    getWidth(Number(curSlide.innerText), Number(allSlide.innerText))
+});
+
+function addZeros (cur, all){
+    if (cur < 10){
+      curSlide.innerText = `0${cur}`
+    }
+    if (all < 10){
+      allSlide.innerText = `0${all}`
+    }
+}
+
+function getWidth(cur, all){
+    let curPercent = cur/all*100
+    progressCur.style.width = `${curPercent}%`
+}
+
+mainSwiper.update();
+
+
+
+const miniSwiper = new Swiper('.mini-swiper', {
+    loop: true,
+
+    slidesPerView:7,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+})
+
+</script>
+</body>
+</html>
